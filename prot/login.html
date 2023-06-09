@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Begistant@websys</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        >
+        <title>Begistant@websys</title>
+    </head>
+    <body class="text-center">
+        <!--
+        <div class="alert alert-danger" role="alert" th:if="${param.error}">
+            ユーザIDとパスワードが一致しません。
+        </div>
+        <div class="alert alert-primary" role="alert" th:if="${param.logout}">
+            ログアウトしました。
+        </div>
+        -->
+        <h1 class="h3 mt-2 mb-3 font-weight-normal">Begistant</h1>
+        <h1 class="h3 mt-2 mb-3 font-weight-normal">ログイン</h1>
+        <form class="w-25 mx-auto" th:action="@{/login}" method="post">
+           	<label for="username" class="sr-only"></label>
+           	<input class="form-control" id="username"
+           			type="text" name="username" placeholder="ユーザID" 
+           			required autofocus/>
+           	<label for="password" class="sr-only"></label>
+           	<input class="form-control" id="password"
+           			type="password" name="password" placeholder="パスワード" 
+           			required/>
+                    <br>
+                       <a class="btn btn-outline-secondary" href="main.html" role="button">ログイン</a>
+<!--
+                       <input class="btn btn-outline-primary my-1" type="submit" value="Sign In"/>
+ -->
+           </form>
+        <p class="mt-2 mb-3 text-muted">&copy; 2023</p>
+    </body>
+</html>
